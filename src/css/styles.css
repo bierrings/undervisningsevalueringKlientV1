@@ -1,0 +1,31 @@
+.firstDiv {
+    width: 100%;
+
+    position: fixed;
+
+
+
+}
+
+.ramme{
+
+    position: fixed;
+    width: 850px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nypadding{
+
+    padding-top: 20px;
+
+
+}
+
+.prea {
+    padding-top: 1cm;
+}
