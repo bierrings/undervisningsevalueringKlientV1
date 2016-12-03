@@ -17,14 +17,17 @@ var SDK = {
             error: function (xhr, status, errorThrown) {
                 cb({xhr: xhr, status: status, error: errorThrown});
             }
+
         });
     },
 
 
-    Book: {
+
+    Lecture: {
         getAll: function (cb) {
-            SDK.request({method: "GET", url: "/lecture", headers: {filter: {include: ["id", "course_id"]}}}, cb);
+            SDK.request({method: "GET", url: "/lecture", headers: {filter: {include: ["id", "course"]}}}, cb);
         },
+
         create: function (data, cb) {
             SDK.request({method: "POST", url: "/book", data: data, headers: {authorization: SDK.Storage.load("tokenId")}}, cb);
         }
@@ -53,8 +56,8 @@ var SDK = {
 
     logOut:function() {
         SDK.Storage.remove("cbsMail");
-        SDK.Storage.remove("password");
         SDK.Storage.remove("type");
+        SDK.Storage.remove("userId");
     },
 
     login: function (cbsMail, password, cb) {
