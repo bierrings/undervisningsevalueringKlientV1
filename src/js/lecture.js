@@ -1,35 +1,59 @@
 /**
- * Created by madsbierrings on 01/12/2016.
+ * Created by madsbierrings on 03/12/2016.
  */
+$(document).ready(function () {
 
-$(document).ready(function(){
+    //Fires on page-load
+    SDK.Course.getById(function (err, courses) {
+        if (err) throw err;
 
-    var course = location.hash;
-    var course = course.replace('#', '');
+        /*var decrypted = encryptDecrypt(courses);
+         decrypted = JSON.parse(decrypted);
+         */
 
-    var $coursesTable = $("#coursesTable")
-    var code = JSON.parse(localStorage.getItem("lectureCode"));
+        var $courseDropdown = $("#courseDropdown");
+        courses.forEach(function (course) {
 
-//Her henter man og får kontakt med serveren. eksempelet fra chrashcourset til books
 
-    $.ajax({
-        url:"http://localhost:5000/api/lecture/" + course,
-        method: "GET",
-        dataType: "json",
+            $courseDropdown.append(
+                "<button data-course=" + course.displaytext + ">" + "<li>" + course.code + "</li>" + "</button>");
+            console.log(course);
 
-        success: function(lectures){
+        });
 
-            lectures.forEach(function(lectureId){
+        $courseDropdown.on('click', "button", function () {
+            var course = $(this).data("course");
+            console.log(course);
+            // console.log(event);
+            SDK.Lectures.getById(course, function (err, data) {
+                if (err) throw err;
 
-                $coursesTable.append(
-                    "<tr>" +
-                    "<td>" + lectureId.description + "</td>" +
-                    "<td>" + lectureId.type + "</td>" +
-                    "<td>" + lectureId.startDate + "</td>" +
-                    "<td><a role='button' href='opretReview.html' class='btn btn-success btn-lg'> lav review</a></td>" +
-                    "</tr>"
-                );
+                console.log(data);
+
+                /* var decrypted = encryptDecrypt(data);
+                 decrypted = JSON.parse(decrypted);*/
+
+                var $lecturesTableBody = $("#lecturesTableBody");
+                data.forEach(function (lecture) {
+
+                    $lecturesTableBody.append(
+                        "<tr>" +
+                        "<td>" + lecture.id + "</td>" +
+                        "<td>" + lecture.type + "</td>" +
+                        "<td>" + lecture.description + "</td>" +
+                        "<td>" + lecture.startDate + "</td>" +
+                        "<td>" + lecture.endDate + "</td>" +
+                        "<td>" + "<button> </button>" + "</td>" +
+                        "</tr>");
+
+
+                });
+
+
             });
-        },
+        });
+
+
     });
+
 });

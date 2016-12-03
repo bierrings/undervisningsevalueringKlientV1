@@ -3,9 +3,18 @@
 
     position: fixed;
 
-
-
 }
+
+.dropdownbox {
+
+    position: fixed;
+    width: 10%;
+    top:30%;
+    left: 20%;
+}
+
+
+
 
 .ramme{
 

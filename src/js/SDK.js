@@ -1,28 +1,58 @@
-var SDK = {
 
-    serverURL: "http://localhost:5000/api",
+    var SDK = {
 
-    request: function (options, cb) {
+        serverURL: "http://localhost:5000/api",
 
-        //Perform XHR
-        $.ajax({
-            url: SDK.serverURL + options.url,
-            method: options.method,
-            contentType: "application/json",
-            dataType: "json",
-            data: JSON.stringify(options.data),
-            success: function (data, status, xhr) {
-                cb(null, data, status, xhr);
-            },
-            error: function (xhr, status, errorThrown) {
-                cb({xhr: xhr, status: status, error: errorThrown});
+        request: function (options, cb) {
+
+            //Perform XHR
+            $.ajax({
+                url: SDK.serverURL + options.url,
+                method: options.method,
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify(options.data),
+                success: function (data, status, xhr) {
+                    cb(null, data, status, xhr);
+                },
+                error: function (xhr, status, errorThrown) {
+                    cb({xhr: xhr, status: status, error: errorThrown});
+                }
+            });
+        },
+
+
+
+        Lectures: {
+            getById: function (id, cb) {
+                SDK.request({
+                    method: "GET",
+                    url: "/lecture/" + id
+                    //headers: {filter: {include: ["data-course"]}}
+                }, cb);
             }
-
-        });
-    },
+        },
 
 
+        Course: {
+            getById: function (cb) {
 
+                $.ajax({
+                    url: SDK.serverURL + "/course/" + SDK.Storage.load("tokenId"),
+                    method: "GET",
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (data) {
+                        //SDK.Storage.persist("courses", data);
+                        cb(null,data)
+                    }
+                });
+
+            }
+        },
+
+
+   /*
     Lecture: {
         getAll: function (cb) {
             SDK.request({method: "GET", url: "/lecture", headers: {filter: {include: ["id", "course"]}}}, cb);
@@ -32,32 +62,13 @@ var SDK = {
             SDK.request({method: "POST", url: "/book", data: data, headers: {authorization: SDK.Storage.load("tokenId")}}, cb);
         }
     },
+*/
 
-    User: {
-        getAll: function (cb) {
-            SDK.request({method: "GET", url: "/staffs"}, cb);
-        },
-        current:function () {
-            return SDK.Storage.load("user");
-        }
-    },
-
-    Publisher: {
-        getAll: function (cb) {
-            SDK.request({method: "GET", url: "/publishers"}, cb);
-        }
-    },
-
-    Author: {
-        getAll: function (cb) {
-            SDK.request({method: "GET", url: "/authors"}, cb);
-        }
-    },
 
     logOut:function() {
-        SDK.Storage.remove("cbsMail");
+        SDK.Storage.remove("tokenId");
+        SDK.Storage.remove("password");
         SDK.Storage.remove("type");
-        SDK.Storage.remove("userId");
     },
 
     login: function (cbsMail, password, cb) {
@@ -73,7 +84,9 @@ var SDK = {
             //On login-error
             if (err) return cb(err);
 
-            SDK.Storage.persist("cbsMail", data.id);
+            SDK.Storage.persist("tokenId", data.id);
+            SDK.Storage.persist("type", data.type);
+
 
 
             cb(null, data);

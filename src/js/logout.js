@@ -17,7 +17,7 @@ $(document).ready(function () {
                 return $("#logoutForm").find(".form-group").addClass("has-error");
             }
 
-            window.location.href = "../html/login.html";
+            window.location.href = "../../login.html";
 
         });
 

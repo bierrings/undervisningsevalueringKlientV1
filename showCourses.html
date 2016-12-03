@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <meta charset="UTF-8">
+    <title>Se kurser</title>
+</head>
+
+<body>
+
+<div>
+
+    <div class ="container">
+
+        <a href="index.html">
+            <img alt="CBS" src="cbs_logo.jpg" width="60" height="42">
+        </a>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Hjem</a></li>
+
+                    </ul>
+                </div>
+
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="opretReview.html">Opret review</a></li>
+                        <li><a href="kalender.html">Kalender</a></li>
+                        <li><a href="seReviews.html">Se reviews</a></li>
+                        <li><a href="showCourses.html.html">Se kurser</a></li>
+
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html" id="logOut">Log ud</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+
+                <div class="page-header">
+                    <h1>Se alle undervisningsgange</h1>
+                <div>
+
+
+
+
+
+        <div class ="dropdownbox">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="Dropdrop" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            Vælg Fag
+                            <span class="caret"></span>
+
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li id="courseDropdown" value="course.id"><a> </a></li>
+                        </ul>
+
+        </div>
+<br><br><br><br><br><br>
+                <table class="table">
+                    <thead>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Fag</th>
+                    <th>Starttid</th>
+                    <th>Sluttid</th>
+                    <th></th>
+                    </thead>
+                    <tbody id="lecturesTableBody">
+
+                    </tbody>
+                </table>
+                </div>
+  </div>
+            </div>
+        </div>
+
+
+    </div>
+
+<script src="lib/js/jquery-3.1.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="src/js/lecture.js"></script>
+<script src="src/js/SDK.js"></script>
+
+</body>
+</html>

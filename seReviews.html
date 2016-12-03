@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="../../lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
     <link rel="stylesheet" href="lib/css/bootstrap.lumen.min.css">
     <link rel="stylesheet" href="css/sticky-footer.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 
     <meta charset="UTF-8">
-    <title>Se kurser</title>
+    <title>Hjem</title>
 </head>
-<div>
+<body>
 
 <div class ="container">
 
+
+
+
     <a href="index.html">
-        <img alt="CBS" src="../../cbs_logo.jpg" width="60" height="42">
+        <img alt="CBS" src="cbs_logo.jpg" width="60" height="42">
     </a>
+
 
 
     <nav class="navbar navbar-default">
@@ -41,7 +45,6 @@
                     <li><a href="opretReview.html">Opret review</a></li>
                     <li><a href="kalender.html">Kalender</a></li>
                     <li><a href="seReviews.html">Se reviews</a></li>
-                    <li><a href="seKurser.html">Se kurser</a></li>
 
                 </ul>
                 <form class="navbar-form navbar-left">
@@ -49,37 +52,22 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.html" id="logOut">Log ud</a></li>
+                    <li><a href="login.html">Log ud</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
 
-    <div class ="page-header">
-        <h1>Se alle lectures</h1>
+
+    <div class="jumbotron">
+        <h1>Velkommen til undervisningsevaluering!</h1>
+        <p>Evaluer din undervisning</p>
+
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Læs mere</a></p>
     </div>
 
-   <table class ="table">
-        <thead>
-        <th>Navn på faget</th>
-        <th>Type</th>
-        <th>Dato start</th>
-        <th>Lav review</th>
-        </thead>
-
-        <tbody id ="lectureTableBody">
-        <tr></tr>
-        </tbody>
-   </table>
 </div>
-</div>
-
-<script src="../../lib/js/jquery-3.1.1.js"></script>
-<script src="../../lib/js/bootstrap.js"></script>
-<script src="../js/Login.js"></script>
-<script src="../js/SDK.js"></script>
-<script type="text/javascript" src="src/js/lectures.js"></script>
 
 
 
