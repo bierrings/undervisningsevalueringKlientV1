@@ -55,22 +55,13 @@
             getAll: function (cb) {
                 SDK.request({
                     method: "GET",
-                    url: "/review",
+                    url: "/review/",
                     headers: {filter: {include: ["userId", "lectureId", "rating", "comment", "isDeleted"]}}
                 }, cb);
             },
-            create: function (data, cb) {
-                SDK.request({
-                    method: "POST",
-                    url: "/review",
-                    data: data,
-                    headers: {authorization: SDK.Storage.load("tokenId")}
-                }, cb);
-            }
+
         },
-        current: function () {
-            return SDK.Storage.load("user");
-        },
+
 
 
 

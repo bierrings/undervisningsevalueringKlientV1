@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ccdb69-4e25-487e-ac13-e4714d44bccd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/review.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seReviews.html" afterPath="$PROJECT_DIR$/seReviews.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showCourses.html" afterPath="$PROJECT_DIR$/showCourses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/SDK.js" afterPath="$PROJECT_DIR$/src/js/SDK.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/lecture.js" afterPath="$PROJECT_DIR$/src/js/lecture.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/review.js" afterPath="$PROJECT_DIR$/src/js/review.js" />
     </list>
     <ignored path="disprojekt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,25 +59,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lecture.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lecture.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/lecture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            <state relative-caret-position="546">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
-                <marker date="1480947117000" expanded="true" signature="468:576" ph="..." />
-                <marker date="1480947117000" expanded="true" signature="543:576" ph="..." />
+                <marker date="1480951657000" expanded="true" signature="468:576" ph="..." />
+                <marker date="1480951657000" expanded="true" signature="543:576" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="review.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/review.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,8 +75,28 @@
       <file leaf-file-name="seReviews.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seReviews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+            <state relative-caret-position="402">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/review.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -96,8 +105,8 @@
       <file leaf-file-name="SDK.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/SDK.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="495">
+              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -135,17 +144,17 @@
         <option value="$PROJECT_DIR$/src/html/showCourses.html" />
         <option value="$PROJECT_DIR$/src/html/login.html" />
         <option value="$PROJECT_DIR$/src/login.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/lib/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/css/styles.css" />
         <option value="$PROJECT_DIR$/src/js/login.js" />
         <option value="$PROJECT_DIR$/lib/js/jquery-3.1.1.js" />
-        <option value="$PROJECT_DIR$/src/js/lecture.js" />
         <option value="$PROJECT_DIR$/showCourses.html" />
         <option value="$PROJECT_DIR$/seReviews.html" />
-        <option value="$PROJECT_DIR$/src/js/SDK.js" />
         <option value="$PROJECT_DIR$/src/js/review.js" />
+        <option value="$PROJECT_DIR$/src/js/lecture.js" />
+        <option value="$PROJECT_DIR$/src/js/SDK.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -370,7 +379,7 @@
       <workItem from="1480617915513" duration="69000" />
       <workItem from="1480618166260" duration="194000" />
       <workItem from="1480618794739" duration="6487000" />
-      <workItem from="1480758527803" duration="30290000" />
+      <workItem from="1480758527803" duration="31519000" />
     </task>
     <task id="LOCAL-00001" summary="Lecture table created">
       <created>1480760918713</created>
@@ -407,11 +416,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480937139065</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Button in lecture table works - review table started">
+      <created>1480951024693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1480951024693</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57856000" />
+    <option name="totallyTimeSpent" value="59085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="853" extended-state="6" />
@@ -453,7 +469,8 @@
     <MESSAGE value="Lectures table created" />
     <MESSAGE value="HTML files moved up" />
     <MESSAGE value="Lecture table refreshes when a new course is clicked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lecture table refreshes when a new course is clicked" />
+    <MESSAGE value="Button in lecture table works - review table started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Button in lecture table works - review table started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -741,14 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -829,21 +838,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/lecture.js">
+    <entry file="file://$PROJECT_DIR$/src/js/SDK.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <marker date="1480947117000" expanded="true" signature="468:576" ph="..." />
-            <marker date="1480947117000" expanded="true" signature="543:576" ph="..." />
-          </folding>
+        <state relative-caret-position="495">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seReviews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+        <state relative-caret-position="402">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -856,19 +862,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/SDK.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="267">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/lecture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1480951657000" expanded="true" signature="468:576" ph="..." />
+            <marker date="1480951657000" expanded="true" signature="543:576" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

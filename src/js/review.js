@@ -23,13 +23,14 @@ $(document).ready(function () {
                  decrypted = JSON.parse(decrypted);*/
 
         var $reviewTableBody = $("#reviewTableBody");
-        decrypted.forEach(function (book, i) {
+        data.forEach(function (review) {
 
             $reviewTableBody.append(
                 "<tr>" +
+                "<td>" + review.userId + "</td>" +
                 "<td>" + review.lectureId + "</td>" +
-                "<td>" + review.version + "</td>" +
-                "<td>" + review.priceAB + "</td>" +
+                "<td>" + review.rating + "</td>" +
+                "<td>" + review.comment + "</td>" +
                 "</tr>");
         });
 
