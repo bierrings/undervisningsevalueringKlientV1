@@ -4,16 +4,26 @@
     position: fixed;
 
 }
-
 .dropdownbox {
 
-    position: fixed;
+    position: relative;
+
     width: 10%;
-    top:30%;
-    left: 20%;
+    margin-top:0%;
+    left: 0%;
+    z-index: 2;
 }
 
 
+
+.ramme1{
+
+    text-align: center;
+    width: 100%;
+    border: 5px solid steelblue;
+    margin: 0%;
+
+}
 
 
 .ramme{
@@ -22,7 +32,7 @@
     width: 850px;
     padding: 10px;
     border: 5px solid gray;
-    margin: 0;
+    margin: 0%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
