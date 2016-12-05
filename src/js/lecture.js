@@ -5,9 +5,14 @@
 
 $(document).ready(function () {
 
+
+
+
     //Fires on page-load
     SDK.Course.getById(function (err, courses) {
         if (err) throw err;
+
+
 
         /*var decrypted = encryptDecrypt(courses);
          decrypted = JSON.parse(decrypted);
@@ -37,6 +42,8 @@ $(document).ready(function () {
 
                 $("#lecturesTableBody").empty();
 
+
+
                 /* var decrypted = encryptDecrypt(data);
                  decrypted = JSON.parse(decrypted);*/
 
@@ -44,10 +51,7 @@ $(document).ready(function () {
                 data.forEach(function (lecture) {
 
 
-
-
                     $lecturesTableBody.append(
-
 
 
                         "<tr>" +
@@ -56,9 +60,13 @@ $(document).ready(function () {
                         "<td>" + lecture.description + "</td>" +
                         "<td>" + lecture.startDate + "</td>" +
                         "<td>" + lecture.endDate + "</td>" +
-                        "<td>" + "<button>Skriv review</button>" + "</td>" +
+                        "<td>" + "<button id='knap1'>Skriv review</button>" + "</td>" +
                         "</tr>");
 
+                    $('button[id^="knap1"]').click(function(){
+                        alert(this.id);
+                        knap1.close();
+                    });
 
 
                 });

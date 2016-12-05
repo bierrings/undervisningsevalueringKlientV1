@@ -22,7 +22,6 @@
         },
 
 
-
         Lectures: {
             getById: function (id, cb) {
                 SDK.request({
@@ -52,20 +51,30 @@
         },
 
 
-   /*
-    Lecture: {
-        getAll: function (cb) {
-            SDK.request({method: "GET", url: "/lecture", headers: {filter: {include: ["id", "course"]}}}, cb);
+        Review: {
+            getAll: function (cb) {
+                SDK.request({
+                    method: "GET",
+                    url: "/review",
+                    headers: {filter: {include: ["userId", "lectureId", "rating", "comment", "isDeleted"]}}
+                }, cb);
+            },
+            create: function (data, cb) {
+                SDK.request({
+                    method: "POST",
+                    url: "/review",
+                    data: data,
+                    headers: {authorization: SDK.Storage.load("tokenId")}
+                }, cb);
+            }
+        },
+        current: function () {
+            return SDK.Storage.load("user");
         },
 
-        create: function (data, cb) {
-            SDK.request({method: "POST", url: "/book", data: data, headers: {authorization: SDK.Storage.load("tokenId")}}, cb);
-        }
-    },
-*/
 
 
-    logOut:function() {
+        logOut:function() {
         SDK.Storage.remove("tokenId");
         SDK.Storage.remove("password");
         SDK.Storage.remove("type");
@@ -96,8 +105,9 @@
     }
     ,
 
+
     Storage: {
-        prefix: "BookStoreSDK",
+        prefix: "EvalueringSDK",
         persist: function (key, value) {
             window.localStorage.setItem(this.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
         },

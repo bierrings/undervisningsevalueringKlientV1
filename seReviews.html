@@ -3,8 +3,6 @@
 <head>
 
     <link rel="stylesheet" href="lib/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/css/bootstrap.lumen.min.css">
-    <link rel="stylesheet" href="css/sticky-footer.css">
     <link rel="stylesheet" href="src/css/styles.css">
 
     <meta charset="UTF-8">
@@ -21,9 +19,12 @@
         <img alt="CBS" src="cbs_logo.jpg" width="60" height="42">
     </a>
 
+    <div class="row">
+        <div class="col-lg-12">
 
 
-    <nav class="navbar navbar-default">
+
+        <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -39,12 +40,14 @@
                 </ul>
             </div>
 
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="opretReview.html">Opret review</a></li>
                     <li><a href="kalender.html">Kalender</a></li>
                     <li><a href="seReviews.html">Se reviews</a></li>
+                    <li><a href="showCourses.html">Se kurser</a></li>
 
                 </ul>
                 <form class="navbar-form navbar-left">
@@ -52,22 +55,47 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.html">Log ud</a></li>
+                    <li><a href="login.html" id="logOut">Log ud</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
 
+            <div class="page-header">
+                <h1>Se alle reviews</h1>
+                <div>
 
-    <div class="jumbotron">
-        <h1>Velkommen til undervisningsevaluering!</h1>
-        <p>Evaluer din undervisning</p>
 
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Læs mere</a></p>
+
+                <div class ="ramme1">
+        <table class="table">
+            <thead>
+            <th><p align="center">ID</p></th>
+            <th><p align="center">Bruger ID</p></th>
+            <th><p align="center">Lecture ID</p></th>
+            <th><p align="center">Rating</p></th>
+            <th><p align="center">Kommentar</p></th>
+            <th></th>
+            </thead>
+            <tbody id="reviewTableBody">
+
+            </tbody>
+        </table>
+</div>
+</div>
+</div>
+</div>
+        </div>
     </div>
 
-</div>
+
+<script src="lib/js/jquery-3.1.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="src/js/review.js"></script>
+<script src="src/js/lecture.js"></script>
+<script src="src/js/SDK.js"></script>
+
 
 
 
