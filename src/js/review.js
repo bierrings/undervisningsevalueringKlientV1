@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 
     //Fires on page-load
-    SDK.Review.getAll(function(err, data){
+    SDK.LectureReview.getAll(function(err, data){
         if(err) throw err;
 
 
@@ -31,7 +31,14 @@ $(document).ready(function () {
                 "<td>" + review.lectureId + "</td>" +
                 "<td>" + review.rating + "</td>" +
                 "<td>" + review.comment + "</td>" +
+                "<td>" + "<button id='knap2'>Slet review</button>" + "</td>" +
                 "</tr>");
+
+            $('button[id^="knap2"]').click(function(){
+                knap1.close();
+            });
+
+
         });
 
     });

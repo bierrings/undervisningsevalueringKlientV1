@@ -51,13 +51,17 @@
         },
 
 
-        Review: {
+
+
+
+
+        LectureReview: {
             getAll: function (cb) {
-                SDK.request({
-                    method: "GET",
-                    url: "/review/",
-                    headers: {filter: {include: ["userId", "lectureId", "rating", "comment", "isDeleted"]}}
-                }, cb);
+                SDK.request({method: "GET" , url: "/review/lecture/" + SDK.Storage.load("lectureId"), headers: {filter: {include: ["id", "userId", "lectureId", "rating", "comment", "isDeleted"]}}}, cb);
+
+            },
+            create: function (data, cb){
+                SDK.request({method: "POST", url: "/review/", data: data, headers: {authorization: SDK.Storage.load("tokenId")}}, cb);
             },
 
         },
