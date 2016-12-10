@@ -35,6 +35,11 @@ $(document).ready(function () {
                 "</tr>");
 
             $('button[id^="knap2"]').click(function(){
+               var confirm = window.confirm("Vil du slette dit review?");
+
+                if(confirm === true){
+                    $(review).remove();
+                }
                 knap1.close();
             });
 

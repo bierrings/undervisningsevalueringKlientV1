@@ -4,22 +4,10 @@
 
 $(document).ready(function () {
 
-    $("#logoutButton").on("click", function(e){
-        e.preventDefault();
+    $("#logOutButton").on("click", function(){
+        SDK.logOut();
 
-        var email = $("cbsMail").val();
-        var pw = $("type").val();
-
-        SDK.logOut(email, pw, function(err, data){
-
-            //On wrong credentials
-            if(err) {
-                return $("#logoutForm").find(".form-group").addClass("has-error");
-            }
-
-            window.location.href = "../../login.html";
-
-        });
+        window.location("login.html");
 
     });
 
