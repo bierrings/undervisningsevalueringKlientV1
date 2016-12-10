@@ -104,7 +104,6 @@
 
         logOut:function() {
         SDK.Storage.remove("userId");
-        SDK.Storage.remove("password");
         SDK.Storage.remove("type");
     },
 
