@@ -1,27 +1,22 @@
 /**
- * Created by madsbierrings on 05/12/2016.
- */
-
-/**
- * Created by madsbierrings on 03/12/2016.
+ * Created by madsbierrings on 10/12/2016.
  */
 
 $(document).ready(function () {
 
 
     //Fires on page-load
-    SDK.UserReview.getAll(function(err, data){
+    SDK.LectureReview.getAll(function(err, data){
         if(err) throw err;
 
 
 
-        var $reviewBody = $("#reviewBody");
+        var $reviewTeacherBody = $("#reviewTeacherBody");
         data.forEach(function (review) {
 
 
-            $reviewBody.append(
+            $reviewTeacherBody.append(
                 "<tr>" +
-                "<td>" + review.lectureId + "</td>" +
                 "<td>" + review.rating + "</td>" +
                 "<td>" + review.comment + "</td>" +
                 "<td>" + "<button class='delete' data-review=" + review.id + "> Slet </button>" + "</td>" +
@@ -29,7 +24,9 @@ $(document).ready(function () {
         });
 
     });
-    $('#reviewBody').on("click",".delete",function () {
+
+
+    $('#reviewTeacherBody').on("click",".delete",function () {
         var reviewId = $(this).data("review");
         var deleteReview = {
             reviewId: reviewId
@@ -39,5 +36,5 @@ $(document).ready(function () {
             location.reload();
             console.log("delete");
         });
-        });
+    });
 });

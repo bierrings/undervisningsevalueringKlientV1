@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/css/styles.css">
 
     <meta charset="UTF-8">
-    <title>Se kurser</title>
+    <title>Skriv review</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <ul class="nav navbar-nav">
-                        <li><a href="indexStudent.html">Hjem</a></li>
+                        <li><a href="indexTeacher.html">Hjem</a></li>
 
                     </ul>
                 </div>
@@ -40,8 +40,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="seReviews.html">Se reviews</a></li>
-                        <li><a href="showCourses.html">Se kurser</a></li>
+                        <li><a href="showCoursesTeacher.html">Se kurser</a></li>
 
                     </ul>
                     <form class="navbar-form navbar-left">
@@ -57,59 +56,42 @@
 
 
 
-                <div class="page-header">
-                    <h1>Se alle undervisningsgange</h1>
-                <div>
-
-
-<br>
-
-
-        <div class ="dropdownbox">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="Dropdrop" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="true">
-                            Vælg Fag
-                            <span class="caret"></span>
-
-
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li id="courseDropdown" value="course.id"><a> </a></li>
-                        </ul>
+        <div class="page-header">
+            <h1>Reviews</h1>
 
         </div>
 
 
+        <div class="lectureframe">
+            <table class="table">
 
-<br>
+                <thead>
+                <th>Rating</th>
+                <th>Kommentar</th>
+                <th></th>
+                </thead>
+                <tbody id="reviewTeacherBody">
 
-               <div class ="ramme1">
-                <table class="table">
-                    <thead>
-                    <th><p  align="center">ID</p></th>
-                    <th><p align="center">Type</p></th>
-                    <th><p align="center">Fag</p></th>
-                    <th><p align="center">Starttid</p></th>
-                    <th><p align="center">Sluttid</p></th>
-                    <th></th>
-                    </thead>
-                    <tbody id="lecturesTableBody">
-
-                    </tbody>
-                </table>
-</div>
-</div>
+                </tbody>
+            </table>
 
 
-</div>
-</div>
+        </div>
+
+
+    </div>
 </div>
 
 <script src="lib/js/jquery-3.1.1.js"></script>
 <script src="lib/js/bootstrap.js"></script>
-<script src="src/js/studentLecture.js"></script>
+<script src="src/js/teacherLecture.js"></script>
+<script src="src/js/teacherReview.js"></script>
 <script src="src/js/logout.js"></script>
 <script src="src/js/SDK.js"></script>
+
+
+
+
 
 </body>
 </html>

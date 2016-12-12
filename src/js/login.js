@@ -19,18 +19,17 @@ $(document).ready(function () {
 
             if (data.type == "student") {
                 window.alert("Student");
-                window.location.href = "index.html";
+                window.location.href = "indexStudent.html";
             }
 
 
             else if (data.type == "teacher") {
                 window.alert("Teacher");
-                window.location.href = "index.html";
+                window.location.href = "indexTeacher.html";
 
             }
             else {
                 window.alert("Lol");
-                window.location.href = "index.html";
             }
 
         });

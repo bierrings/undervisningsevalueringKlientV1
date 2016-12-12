@@ -65,7 +65,7 @@ $(document).ready(function () {
 
                     $('button[id^="knap1"]').click(function(){
                         SDK.Storage.persist("lectureId", lecture.id);
-                        window.location.href='seReviews.html';
+                        window.location.href='createReview.html';
                         knap1.close();
                     });
 

@@ -94,12 +94,30 @@
                 SDK.request({method: "GET" , url: "/review/lecture/" + SDK.Storage.load("lectureId"), headers: {filter: {include: ["id", "userId", "lectureId", "rating", "comment", "isDeleted"]}}}, cb);
 
             },
-            create: function (data, cb){
-                SDK.request({method: "POST", url: "/review/", data: data, headers: {authorization: SDK.Storage.load("userId")}}, cb);
-            },
-
+            create: function (data, cb) {
+                SDK.request({method: "POST", url:"/" + SDK.Storage.load("type") + "/review/", data: data, }, cb);
+            }
         },
 
+
+
+        DeleteReview: {
+            deleteReview: function (data, cb) {
+                SDK.request({
+                    data: {
+                        id: data
+                    },
+                    method: "DELETE",
+                    url: "/" + SDK.Storage.load("type") + "/deletereview/"
+                }, cb);
+            }
+        },
+
+        UserReview: {
+            getAll: function (cb) {
+                SDK.request({method: "GET", url: "/review/user/" + SDK.Storage.load("userId"), headers: {filter: {include: ["id", "userId", "lectureId", "rating", "comment", "isDeleted"]}}}, cb);
+            },
+        },
 
 
         logOut:function() {
