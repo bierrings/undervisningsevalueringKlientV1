@@ -10,9 +10,8 @@ $(document).ready(function () {
 
 
     //Fires on page-load
-    SDK.UserReview.getAll(function(err, data){
-        if(err) throw err;
-
+    SDK.UserReview.getAll(function (err, data) {
+        if (err) throw err;
 
 
         var $reviewBody = $("#reviewBody");
@@ -29,7 +28,7 @@ $(document).ready(function () {
         });
 
     });
-    $('#reviewBody').on("click",".delete",function () {
+    $('#reviewBody').on("click", ".delete", function () {
         var reviewId = $(this).data("review");
         var deleteReview = {
             reviewId: reviewId
@@ -39,5 +38,5 @@ $(document).ready(function () {
             location.reload();
             console.log("delete");
         });
-        });
+    });
 });

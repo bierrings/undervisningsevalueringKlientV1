@@ -4,19 +4,18 @@
     position: fixed;
 
 }
+
 .dropdownbox {
 
     position: relative;
 
     width: 10%;
-    margin-top:0%;
+    margin-top: 0%;
     left: 0%;
     z-index: 2;
 }
 
-
-
-.ramme1{
+.ramme1 {
 
     text-align: center;
     width: 100%;
@@ -25,8 +24,7 @@
 
 }
 
-
-.ramme{
+.ramme {
 
     position: fixed;
     width: 850px;
@@ -38,10 +36,9 @@
     transform: translate(-50%, -50%);
 }
 
-.nypadding{
+.nypadding {
 
     padding-top: 20px;
-
 
 }
 

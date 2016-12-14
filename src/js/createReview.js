@@ -1,43 +1,62 @@
+/**
+ * Denne klasse håndterer oprettelse af reviews
+ */
+
+$(document).ready(function () {
+
+    getAllReviews();
+
+    function getAllReviews() {
+
+        SDK.LectureReview.getAll(function (err, data) {
+            if (err) throw err;
 
 
-function getAllReviews() {
-    //Fires on page-load
-    SDK.LectureReview.getAll(function (err, data) {
-        if (err) throw err;
-
-        /* var decrypted = encryptDecrypt(data);
-         decrypted = JSON.parse(decrypted);
-         */
-
-        var $lectureReviewBody = $("#lectureReviewBody");
-        data.forEach(function (review) {
+            $("#makeReview").on("click", function () {
+                $('#createReview').modal('show');
+            });
 
 
-            $lectureReviewBody.append(
-                "<tr>" +
-                "<td>" + review.rating + "</td>" +
-                "<td>" + review.comment + "</td>" +
-                "</tr>");
+            var $lectureReviewBody = $("#lectureReviewBody");
+            data.forEach(function (review) {
+
+                //Her appender jeg værdierne ind i en tabel
+                $lectureReviewBody.append(
+                    "<tr>" +
+                    "<td>" + review.rating + "</td>" +
+                    "<td>" + review.comment + "</td>" +
+                    "</tr>");
+
+            });
+
+        });
+    }
+
+    $("#createReviewButton").on("click", function () {
+        createReview();
+    })
+
+    /**
+     * Her oprettes den funktion der skal kaldes, når createReviewButton aktiveres
+     */
+    function createReview() {
+        var review = {
+            comment: $("#comment").val(),
+            rating: $("#rating").val(),
+            userId: SDK.Storage.load("userId"),
+            lectureId: SDK.Storage.load("lectureId"),
+
+        };
+
+        SDK.LectureReview.create(review, function (err, data) {
+
+            console.log(review);
+            location.reload();
+
+            $("#createReviewButton").modal("hide");
+
         });
 
+    }
 
-    });
-}
-
-function createReview() {
-    var review = {
-        comment: $("#comment").val(),
-        rating: $("#rating").val(),
-        userId: SDK.Storage.load("userId"),
-        lectureId: SDK.Storage.load("lectureId"),
-
-    };
-
-    SDK.LectureReview.create(review, function (err, data) {
-        console.log(review);
-        location.reload();
-
-        $("#createReviewButton").modal("hide");
-    });
-
-}
+});

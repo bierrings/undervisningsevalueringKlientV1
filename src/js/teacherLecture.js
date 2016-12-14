@@ -1,21 +1,20 @@
 /**
  * Created by madsbierrings on 10/12/2016.
+ * Denne klasse henter en undervisers fag og lektioner
  */
 
 
 $(document).ready(function () {
 
 
-    //Fires on page-load
     SDK.Course.getById(function (err, courses) {
         if (err) throw err;
 
 
-
-        /*var decrypted = encryptDecrypt(courses);
-         decrypted = JSON.parse(decrypted);
+        /**
+         * Drowdown menu der lister en undervisers fag
+         * @type {any}
          */
-
         var $courseDropdown = $("#courseDropdown");
         courses.forEach(function (course) {
 
@@ -41,17 +40,15 @@ $(document).ready(function () {
                 $("#teacherLecturesTableBody").empty();
 
 
-
-                /* var decrypted = encryptDecrypt(data);
-                 decrypted = JSON.parse(decrypted);*/
-
+                /**
+                 * Lektioner appendes i en tabel
+                 * @type {any}
+                 */
                 var $teacherLecturesTableBody = $("#teacherLecturesTableBody");
                 data.forEach(function (lecture) {
 
 
                     $teacherLecturesTableBody.append(
-
-
                         "<tr>" +
                         "<td>" + lecture.id + "</td>" +
                         "<td>" + lecture.type + "</td>" +
@@ -61,9 +58,13 @@ $(document).ready(function () {
                         "<td>" + "<button id='knap2'>Se reviews</button>" + "</td>" +
                         "</tr>");
 
-                    $('button[id^="knap2"]').click(function(){
+
+                    /**
+                     * Knap der sender brugeren videre til review viewet og sender lectureId med
+                     */
+                    $('button[id^="knap2"]').click(function () {
                         SDK.Storage.persist("lectureId", lecture.id);
-                        window.location.href='seReviewsTeacher.html';
+                        window.location.href = 'seReviewsTeacher.html';
                         knap1.close();
                     });
 

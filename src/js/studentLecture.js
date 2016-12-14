@@ -1,27 +1,27 @@
 /**
  * Created by madsbierrings on 03/12/2016.
+ * Denne klasse henter en studerendes fag og lektioner
  */
 
 
 $(document).ready(function () {
 
 
-
-
-    //Fires on page-load
     SDK.Course.getById(function (err, courses) {
         if (err) throw err;
 
-
-
-        /*var decrypted = encryptDecrypt(courses);
-         decrypted = JSON.parse(decrypted);
+        /**
+         * Her oprettes en dropdown menu der skal vise den studerendes fag
+         * @type {any}
          */
 
         var $courseDropdown = $("#courseDropdown");
         courses.forEach(function (course) {
 
 
+            /**
+             * Her tildeles værdierne i dropdown menuen
+             */
             $courseDropdown.append(
                 "<button style='background-color: transparent; type: button; border-color: transparent;" +
                 "cursor: pointer;' data-course=" + course.displaytext + ">" + "<li>" + course.code + "</li>" +
@@ -43,17 +43,16 @@ $(document).ready(function () {
                 $("#lecturesTableBody").empty();
 
 
-
-                /* var decrypted = encryptDecrypt(data);
-                 decrypted = JSON.parse(decrypted);*/
+                /**
+                 * Lektioner loades og bliver appendet i en tabel
+                 * @type {any}
+                 */
 
                 var $lecturesTableBody = $("#lecturesTableBody");
                 data.forEach(function (lecture) {
 
 
                     $lecturesTableBody.append(
-
-
                         "<tr>" +
                         "<td>" + lecture.id + "</td>" +
                         "<td>" + lecture.type + "</td>" +
@@ -63,9 +62,13 @@ $(document).ready(function () {
                         "<td>" + "<button id='knap1'>Skriv review</button>" + "</td>" +
                         "</tr>");
 
-                    $('button[id^="knap1"]').click(function(){
+                    /**
+                     * Skriv review knappen sender brugeren videre til createReview viewet og sender lectureId med
+                     */
+
+                    $('button[id^="knap1"]').click(function () {
                         SDK.Storage.persist("lectureId", lecture.id);
-                        window.location.href='createReview.html';
+                        window.location.href = 'createReview.html';
                         knap1.close();
                     });
 
